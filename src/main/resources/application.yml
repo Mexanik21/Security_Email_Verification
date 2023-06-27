@@ -1,0 +1,33 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/security_test
+    username: postgres
+    password: 123
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    hibernate:
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyComponentPathImpl
+      ddl-auto: update
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: abdullaziz0712@gmail.com
+    password: jbyogxxuupfzuhjv
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
